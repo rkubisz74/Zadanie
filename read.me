@@ -1,0 +1,15 @@
+uruchomienie: .\mvnw spring-boot:run
+
+zgodnie z oczekiwaniami serwis po uruchomieniu pobiera dane z punkapi.com i zapisuje dane do wbudowanej bazy,
+co godzinę pobierane są dane ponownie i aktualizowane
+
+Api dostępne jest pod adresem localhost:8080
+
+GET / - zwraca listę wszystkich rekordów z bazy w oczekiwanym formacie json o podanej strukturze
+GET /foodpairings/search/{phrase} zwraca rekordy zawierające w polu foodPairing podaną frazę
+POST /beers - dodaje do bazy nowy rekord na podstawie danych przesłanych w formie json - wymaga logowania (HttpBasic)
+GET /shutdown - zatrzymuje serwis - wymaga logowania
+
+dane logowania:
+ użytkownik: user
+ hasło: test
